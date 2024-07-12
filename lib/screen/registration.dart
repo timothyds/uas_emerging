@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
+import 'package:uas_project/screen/login.dart';
+
 class RegisterScreen extends StatefulWidget {
   @override
   _RegisterScreenState createState() => _RegisterScreenState();
@@ -24,10 +26,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
     final Map<String, dynamic> jsonResponse = jsonDecode(response.body);
 
     if (jsonResponse['result'] == 'success') {
-      Navigator.pushReplacementNamed(context, '/login');
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => MyLogin()),
+      );
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Registration failed: ${jsonResponse['message']}')),
+        SnackBar(
+            content: Text('Registration failed: ${jsonResponse['message']}')),
       );
     }
   }
@@ -76,7 +82,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
               ),
               TextButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/login');
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => MyLogin()),
+                  );
                 },
                 child: Text('Already have an account? Login'),
               ),

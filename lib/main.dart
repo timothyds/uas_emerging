@@ -4,6 +4,7 @@ import 'package:uas_project/screen/adopt.dart';
 import 'package:uas_project/screen/browse.dart';
 import 'package:uas_project/screen/login.dart';
 import 'package:uas_project/screen/offer.dart';
+import 'package:uas_project/screen/registration.dart';
 
 String active_user = "";
 String _userName = "";
@@ -47,6 +48,8 @@ class MyApp extends StatelessWidget {
         'browse':(context)=> BrowseScreen(),
         'offer':(context)=> OfferScreen(),
         'adopt':(context)=> AdoptScreen(),
+        'login':(context)=>MyLogin(),
+        'register':(context)=>RegisterScreen()
       },
       title: 'Flutter Demo',
       theme: ThemeData(
