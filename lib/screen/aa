@@ -1,0 +1,63 @@
+BottomNavigationBar methodBottomNavBar() {
+    return BottomNavigationBar(
+        currentIndex: _currentIndex,
+        fixedColor: Colors.teal,
+        items: [
+          BottomNavigationBarItem(
+            label: "Home",
+            icon: Icon(Icons.home),
+          ),
+          BottomNavigationBarItem(
+            label: "Search",
+            icon: Icon(
+              Icons.search,
+              size: 40,
+            ),
+          ),
+          BottomNavigationBarItem(
+            label: "History",
+            icon: Icon(
+              Icons.history,
+              size: 40,
+            ),
+          )
+        ],
+        onTap: (int index) {
+          setState(() {
+            _currentIndex=index;
+          });
+        });
+  }
+
+
+
+
+  BottomNavigationBar methodBottomNavBar() {
+    return BottomNavigationBar(
+      currentIndex: _currentIndex,
+      fixedColor: Colors.teal,
+      items: [
+        BottomNavigationBarItem(
+          label: "Home",
+          icon: Icon(Icons.home),
+        ),
+        BottomNavigationBarItem(
+          label: "Browse",
+          icon: Icon(Icons.search),
+        ),
+        BottomNavigationBarItem(
+          label: "Offer",
+          icon: Icon(Icons.local_offer),
+        ),
+        BottomNavigationBarItem(
+          label: "Adopt",
+          icon: Icon(Icons.pets),
+        )
+      ],
+      onTap: (int index) {
+        setState(() {
+          _currentIndex = index;
+        });
+      },
+    );
+  }
