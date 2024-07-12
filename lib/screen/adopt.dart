@@ -18,7 +18,7 @@ class _AdoptScreenState extends State<AdoptScreen> {
   }
 
   Future<List<Pet>> fetchPets() async {
-    final response = await http.get(Uri.parse('https://ubaya.me/flutter/160421125/petlist.php'));
+    final response = await http.get(Uri.parse('https://ubaya.me/flutter/160421125/get_pets.php'));
 
     if (response.statusCode == 200) {
       print('Response body: ${response.body}');

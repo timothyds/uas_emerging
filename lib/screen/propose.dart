@@ -35,7 +35,7 @@ class _ProposeState extends State<Propose> {
       if (response.statusCode == 200) {
         final result = jsonDecode(response.body);
         if (result['result'] == 'success') {
-          Navigator.pop(context); // Go back to the BrowseScreen
+          Navigator.pop(context); 
         } else {
           ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Proposal failed: ${result['message']}')));
         }

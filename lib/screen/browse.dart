@@ -115,7 +115,7 @@ class AnimalCard extends StatelessWidget {
             child: Row(
               children: [
                 Text(
-                  'Interested: ${pet.interestedCount}', // Update this if you have interested count
+                  'Interested: ${pet.interestedCount}',
                   style: TextStyle(fontSize: 16),
                 ),
                 Spacer(),
